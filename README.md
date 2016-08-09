@@ -41,4 +41,4 @@ This section is in progress. Will come out soon.
 
 ## License
 
-[MIT License](http://choosealicense.com/licenses/mit/) © Nick S. Plekhanov
+[MIT License](https://nicksp.mit-license.org/) © Nick S. Plekhanov
