@@ -1,0 +1,192 @@
+'.source.js, .source.jsx':
+
+  # React Core
+  'React: New component':
+    'prefix': 'rnc'
+    'description': 'React: New component'
+    'body': """
+import React, { Component, PropTypes } from 'react';
+
+export default class ${1:NewComponent} extends Component {
+  static propTypes = {
+
+  };
+
+  render() {
+    return (
+      ${2:<div>${1:NewComponent} Content</div>}
+    );
+  }
+}
+"""
+
+  'React: Stateless component':
+    'prefix': 'rnsc'
+    'description': 'React: Stateless component'
+    'body': """
+import React, { PropTypes } from 'react';
+
+const ${1:NewComponent} = (props) => {
+  return (
+    <div>${3:${1:NewComponent} Content}</div>
+  );
+};
+
+${1:NewComponent}.propTypes = {
+  propName: PropTypes.$2
+};
+
+export default ${1:NewComponent};
+"""
+
+  'React: constructor() method':
+    'prefix': 'rctr'
+    'description': 'React: constructor() method'
+    'body': """
+constructor(props) {
+  super(props);
+  ${1}
+}
+"""
+
+  'React: Bind method to this':
+    'prefix': 'rbm'
+    'description': 'React: Bind method to this'
+    'body': 'this.${1} = this.${1}.bind(this);'
+
+  # Lifecycle Methods
+  'React: componentWillMount() lifecycle method':
+    'prefix': 'rlcwm'
+    'description': 'React Lifecycle Methods: componentWillMount() method'
+    'body': """
+componentWillMount() {
+  $1
+}
+"""
+
+  'React: componentDidMount() lifecycle method':
+    'prefix': 'rlcdm'
+    'description': 'React Lifecycle Methods: componentDidMount() method'
+    'body': """
+componentDidMount() {
+  $1
+}
+"""
+
+  'React: componentWillReceiveProps() lifecycle method':
+    'prefix': 'rlcwrp'
+    'description': 'React Lifecycle Methods: componentWillReceiveProps() method'
+    'body': """
+componentWillReceiveProps() {
+  $1
+}
+"""
+
+  'React: componentWillUnmount() lifecycle method':
+    'prefix': 'rlcwun'
+    'description': 'React Lifecycle Methods: componentWillUnmount() method'
+    'body': """
+componentWillUnmount() {
+  $1
+}
+"""
+
+  'React: shouldComponentUpdate() lifecycle method':
+    'prefix': 'rlscup'
+    'description': 'React Lifecycle Methods: shouldComponentUpdate() method'
+    'body': """
+shouldComponentUpdate() {
+  $1
+}
+"""
+
+  # Prop Validation
+  'React: PropTypes.string':
+    'prefix': 'rps'
+    'description': 'React PropTypes: string'
+    'body': '${1:myProp}: PropTypes.string${2:,}'
+
+  'React: PropTypes.string.isRequired':
+    'prefix': 'rpsr'
+    'description': 'React PropTypes: required string'
+    'body': '${1:myProp}: PropTypes.string.isRequired${2:,}'
+
+  'React: PropTypes.number':
+    'prefix': 'rpn'
+    'description': 'React PropTypes: number'
+    'body': '${1:myProp}: PropTypes.number${2:,}'
+
+  'React: PropTypes.number.isRequired':
+    'prefix': 'rpnr'
+    'description': 'React PropTypes: required number'
+    'body': '${1:myProp}: PropTypes.number.isRequired${2:,}'
+
+  'React: PropTypes.object':
+    'prefix': 'rpo'
+    'description': 'React PropTypes: object'
+    'body': '${1:myProp}: PropTypes.object${2:,}'
+
+  'React: PropTypes.object.isRequired':
+    'prefix': 'rpor'
+    'description': 'React PropTypes: required object'
+    'body': '${1:myProp}: PropTypes.object.isRequired${2:,}'
+
+  'React: PropTypes.array':
+    'prefix': 'rpa'
+    'description': 'React PropTypes: array'
+    'body': '${1:myProp}: PropTypes.array${2:,}'
+
+  'React: PropTypes.array.isRequired':
+    'prefix': 'rpar'
+    'description': 'React PropTypes: required array'
+    'body': '${1:myProp}: PropTypes.array.isRequired${2:,}'
+
+  'React: PropTypes.bool':
+    'prefix': 'rpb'
+    'description': 'React PropTypes: bool'
+    'body': '${1:myProp}: PropTypes.bool${2:,}'
+
+  'React: PropTypes.bool.isRequired':
+    'prefix': 'rpbr'
+    'description': 'React PropTypes: required bool'
+    'body': '${1:myProp}: PropTypes.bool.isRequired${2:,}'
+
+  'React: PropTypes.element':
+    'prefix': 'rpe'
+    'description': 'React PropTypes: element'
+    'body': '${1:myProp}: PropTypes.element${2:,}'
+
+  'React: PropTypes.element.isRequired':
+    'prefix': 'rper'
+    'description': 'React PropTypes: required element'
+    'body': '${1:myProp}: PropTypes.element.isRequired${2:,}'
+
+  'React: PropTypes.func':
+    'prefix': 'rpf'
+    'description': 'React PropTypes: function'
+    'body': '${1:myProp}: PropTypes.func${2:,}'
+
+  'React: PropTypes.func.isRequired':
+    'prefix': 'rpfr'
+    'description': 'React PropTypes: required function'
+    'body': '${1:myProp}: PropTypes.func.isRequired${2:,}'
+
+  'React: PropTypes.oneOf':
+    'prefix': 'rpoo'
+    'description': 'React PropTypes: enum'
+    'body': '${1:myProp}: PropTypes.oneOf([$2])${3:,}'
+
+  'React: PropTypes.oneOf.isRequired':
+    'prefix': 'rpoor'
+    'description': 'React PropTypes: required enum'
+    'body': '${1:myProp}: PropTypes.oneOf([$2]).isRequired${3:,}'
+
+  'React: PropTypes.oneOfType':
+    'prefix': 'rpoot'
+    'description': 'React PropTypes: unions'
+    'body': '${1:myProp}: PropTypes.oneOfType([$2])${3:,}'
+
+  'React: PropTypes.oneOfType.isRequired':
+    'prefix': 'rpootr'
+    'description': 'React PropTypes: required unions'
+    'body': '${1:myProp}: PropTypes.oneOfType([$2]).isRequired${3:,}'
