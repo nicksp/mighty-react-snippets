@@ -60,6 +60,17 @@ constructor(props) {
 }
 """
 
+  'React: render() method':
+    'prefix': 'rren'
+    'description': 'React: render() method'
+    'body': """
+render() {
+  return (
+    ${1:<div></div>}
+  );
+}
+"""
+
   'React: Bind method to this':
     'prefix': 'rbm'
     'description': 'React: Bind method to this'
@@ -88,7 +99,7 @@ componentDidMount() {
     'prefix': 'rlcwrp'
     'description': 'React Lifecycle Methods: componentWillReceiveProps() method'
     'body': """
-componentWillReceiveProps() {
+componentWillReceiveProps(nextProps) {
   $1
 }
 """
@@ -106,7 +117,7 @@ componentWillUnmount() {
     'prefix': 'rlscup'
     'description': 'React Lifecycle Methods: shouldComponentUpdate() method'
     'body': """
-shouldComponentUpdate() {
+shouldComponentUpdate(nextProps, nextState) {
   $1
 }
 """
@@ -201,3 +212,41 @@ shouldComponentUpdate() {
     'prefix': 'rpootr'
     'description': 'React PropTypes: required unions'
     'body': '${1:myProp}: PropTypes.oneOfType([$2]).isRequired${3:,}'
+
+  # State Manipulation
+  'React State: Get initial state':
+    'prefix': 'rgis'
+    'description': 'React State: this.state = {}'
+    'body': """
+this.state = {
+  $1
+};
+"""
+
+  'React State: Set state':
+    'prefix': 'rss'
+    'description': 'React State: this.setState = {}'
+    'body': """
+this.setState({
+  $1: $2
+});
+"""
+
+  # Props Manipulation
+  'React Props: Get default props':
+    'prefix': 'rgdp'
+    'description': 'React Props: Class.defaultProps = {}'
+    'body': """
+static defaultProps = {
+  ${1:propName}: ${2:0}${3:,}
+};
+"""
+
+  'React Props: Set prop types':
+    'prefix': 'rspt'
+    'description': 'React Props: Class.propTypes = {}'
+    'body': """
+static propTypes = {
+  ${1:propName}: PropTypes.${2}${3:,}
+};
+"""
