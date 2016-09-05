@@ -1,5 +1,16 @@
 '.source.js, .source.jsx':
 
+  # React Imports
+  'React: import react':
+    'prefix': 'ir'
+    'description': 'Import React package'
+    'body': "import React from 'react';"
+
+  'React: import react-dom render':
+    'prefix': 'irndr'
+    'description': "Import render from 'react-dom'"
+    'body': "import { render } from 'react-dom';"
+
   # React Core
   'React: New component':
     'prefix': 'rnc'
