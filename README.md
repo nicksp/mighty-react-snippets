@@ -17,9 +17,9 @@ apm install mighty-react-snippets
 
 ## Features
 
-- [x] React Snippets
-- [x] React Router Snippets
-- [ ] Redux Snippets
+- React Snippets
+- React Router Snippets
+- Redux Snippets
 
 ## Contributing
 

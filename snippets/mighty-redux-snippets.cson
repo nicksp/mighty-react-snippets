@@ -1,0 +1,60 @@
+'.source.js, .source.jsx':
+
+  # Redux Core
+  'Redux: Smart component':
+    'prefix': 'rdsc'
+    'description': 'Redux: Smart component (Container)'
+    'body': """
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+
+class ${1:MyComponent} extends Component {
+  static propTypes = {
+    $4
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      ${5:<div>MyComponent</div>}
+    );
+  }
+}
+
+const mapStateToProps = (state) => ({
+  $2
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  $3
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(${1:MyComponent});
+"""
+
+  'Redux: Reducer template':
+    'prefix': 'rdred'
+    'description': 'Redux: Reducer template'
+    'body': """
+import * as types from '../constants/ActionTypes';
+
+const initialState = {
+  $2
+};
+
+export default function(state = initialState, action = {}) {
+  switch (action.type) {
+    case types.${3:ACTION}:
+      return {
+        $4
+      };
+
+    default:
+      return state;
+  }
+}
+"""
