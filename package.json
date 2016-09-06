@@ -1,7 +1,7 @@
 {
   "name": "mighty-react-snippets",
   "author": "Nick S. Plekhanov <nickatgit@yandex.com>",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Crafty React and Redux ES6 snippets for Atom Editor",
   "main": "./lib/mighty-react-snippets",
   "repository": {
