@@ -71,10 +71,15 @@ render() {
 }
 """
 
-  'React: Bind method to this':
+  'React: Bind method to this (ES6)':
     'prefix': 'rbm'
-    'description': 'React: Bind method to this'
+    'description': 'React: ES6 bind method to this'
     'body': 'this.${1} = this.${1}.bind(this);'
+
+  'React: Bind method to this (ES7)':
+    'prefix': 'rbm7'
+    'description': 'React: ES7 bind method to this'
+    'body': 'this.${1} = ::this.${1};'
 
   # Lifecycle Methods
   'React: componentWillMount() lifecycle method':
@@ -123,6 +128,16 @@ shouldComponentUpdate(nextProps, nextState) {
 """
 
   # Prop Validation
+  'React: PropTypes.any':
+    'prefix': 'rpany'
+    'description': 'React PropTypes: any'
+    'body': '${1:myProp}: PropTypes.any${2:,}'
+
+  'React: PropTypes.any.isRequired':
+    'prefix': 'rpanyr'
+    'description': 'React PropTypes: required any'
+    'body': '${1:myProp}: PropTypes.any.isRequired${2:,}'
+
   'React: PropTypes.string':
     'prefix': 'rps'
     'description': 'React PropTypes: string'
@@ -213,6 +228,24 @@ shouldComponentUpdate(nextProps, nextState) {
     'description': 'React PropTypes: required unions'
     'body': '${1:myProp}: PropTypes.oneOfType([$2]).isRequired${3:,}'
 
+  'React: PropTypes.shape':
+    'prefix': 'rpsh'
+    'description': 'React PropTypes: shape'
+    'body': """
+PropTypes.shape({
+  $1
+})${2:,}
+"""
+
+  'React: PropTypes.shape.isRequired':
+    'prefix': 'rpshr'
+    'description': 'React PropTypes: required shape'
+    'body': """
+PropTypes.shape({
+  $1
+}).isRequired${2:,}
+"""
+
   # State Manipulation
   'React State: Get initial state':
     'prefix': 'rgis'
@@ -222,6 +255,11 @@ this.state = {
   $1
 };
 """
+
+  'React State: Get state property':
+    'prefix': 'rgsp'
+    'description': 'React State: Get state property'
+    'body': 'this.state.$1'
 
   'React State: Set state':
     'prefix': 'rss'
@@ -241,6 +279,11 @@ static defaultProps = {
   ${1:propName}: ${2:0}${3:,}
 };
 """
+
+  'React Props: Get prop by name':
+    'prefix': 'rgp'
+    'description': 'React Props: Get prop by name'
+    'body': 'this.props.$1'
 
   'React Props: Set prop types':
     'prefix': 'rspt'
