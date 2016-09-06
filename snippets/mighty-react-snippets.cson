@@ -14,18 +14,18 @@
   # React Core
   'React: New component':
     'prefix': 'rnc'
-    'description': 'React: New component'
+    'description': 'React: New dumb component (Presentational)'
     'body': """
 import React, { Component, PropTypes } from 'react';
 
 export default class ${1:NewComponent} extends Component {
   static propTypes = {
-
+    $2
   };
 
   render() {
     return (
-      ${2:<div>${1:NewComponent} Content</div>}
+      ${3:<div>${1:NewComponent} Content</div>}
     );
   }
 }
@@ -33,7 +33,7 @@ export default class ${1:NewComponent} extends Component {
 
   'React: Stateless component':
     'prefix': 'rnsc'
-    'description': 'React: Stateless component'
+    'description': 'React: Stateless functional component'
     'body': """
 import React, { PropTypes } from 'react';
 
