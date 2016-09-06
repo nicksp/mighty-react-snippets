@@ -51,7 +51,7 @@ export default ${1:NewComponent};
 """
 
   'React: constructor() method':
-    'prefix': 'rctr'
+    'prefix': 'rconst'
     'description': 'React: constructor() method'
     'body': """
 constructor(props) {
