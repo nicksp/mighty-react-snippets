@@ -15,11 +15,11 @@ echo '\''{ extends: [airbnb], }'\'' > .eslintrc'
 apm install mighty-react-snippets
 ```
 
-## Features
+## Features / Available Commands
 
-- React Snippets
-- React Router Snippets
-- Redux Snippets
+- [React Snippets](https://github.com/nicksp/mighty-react-snippets/wiki/React-Snippets)
+- [React Router Snippets](https://github.com/nicksp/mighty-react-snippets/wiki/Router-Snippets)
+- [Redux Snippets](https://github.com/nicksp/mighty-react-snippets/wiki/Redux-Snippets)
 
 ## Contributing
 
@@ -34,10 +34,6 @@ apm install mighty-react-snippets
 After install just type one of the shortcuts below and hit tab to expand the snippet in your editor. Only works on files already saved as `.js` or `.jsx`.
 
 Continue hitting tab to cycle through and highlight common editing points in a snippet. The `${N}` syntax in the examples below denote the highlight points.
-
-## Available Commands
-
-This section is in progress. Will come out soon.
 
 ## License
 
