@@ -66,9 +66,9 @@ static contextTypes = {
 };
 """
 
-  'Router: Nav Link Wrapper':
+  'Router: Nav Link wrapper':
     'prefix': 'rrnlw'
-    'description': 'Router: Navigation Link Wrapper'
+    'description': 'Router: Navigation Link wrapper'
     'body': """
 import React, { Component } from 'react';
 import { Link } from 'react-router';
@@ -98,12 +98,12 @@ export default class NavLink extends Component {
   # Router Routes
   'Router Routes: Index route':
     'prefix': 'rrir'
-    'description': 'Router Routes: Index Route'
+    'description': 'Router Routes: Index route'
     'body': '<IndexRoute component={${1:Main}} />'
 
   'Router Routes: Regular route':
     'prefix': 'rrregr'
-    'description': 'Router Routes: Regular Route'
+    'description': 'Router Routes: Regular route'
     'body': '<Route path="${1:name}" component={${2:Component}} />'
 
   'Router Routes: Redirect':
